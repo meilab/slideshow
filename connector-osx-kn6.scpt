@@ -52,7 +52,7 @@ on knGetState()
        try
             set state to "running"
             tell application "Keynote"
-                if false then -- FIXME: how to detect play mode?
+                if playing is true then
                     set state to "viewing"
                 else if (get count of slides of front document) > 0 then
                     set state to "editing"
