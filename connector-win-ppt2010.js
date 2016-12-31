@@ -21,7 +21,7 @@ var activeApplication = function () {
         if (procs.Count > 0)
             app = WScript.CreateObject("PowerPoint.Application");
         else
-            app = null;
+            app = new ActiveXObject("PowerPoint.Application");
     }
     catch (e) {
         app = null;
